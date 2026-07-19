@@ -73,7 +73,9 @@ See [labs/tools.md](labs/tools.md) for the browser-based problem-solving tools u
 ├── labs/                           14 lab worksheets + index + tools
 ├── reference/                      Source documents (not learner-facing)
 ├── LG-*.md                         Learner Guide Markdown mirror
-└── .claude/skills/                 Single-source build pipeline (see below)
+└── .claude/
+    ├── skills/                     Build pipeline, QA scanner, lab standard, Drive push
+    └── commands/                   /gdrive-push-nonwsq slash command
 ```
 
 ## Building the Courseware
@@ -99,6 +101,22 @@ WSQ/SSG/SkillsFuture/TRAQOM references, digital attendance, course-funding langu
 course codes and any formal-assessment material — and reports each hit with its exact slide,
 paragraph or line number.
 
+### Publishing to Google Drive
+
+```bash
+python3 .claude/skills/gdrive-push-nonwsq/gdrive_push_nonwsq.py "<drive-folder-link>" --dry-run
+python3 .claude/skills/gdrive-push-nonwsq/gdrive_push_nonwsq.py "<drive-folder-link>"
+```
+
+Routes each artifact to its Drive folder — deck PPT → **Trainer Slides**, deck PDF →
+**Learner Slides**, LG → **Learner Guide**, LP → **Lesson Plan**, `labs/` → **Activities** —
+auto-creating each folder's `archive/` and moving superseded versions into it. Nothing on
+Drive is ever deleted, and unchanged files (matched by MD5) are skipped.
+
+Activities is **additive**: lab files are uploaded and updated while the trainer's existing
+datasets and `.xlsx` templates are left in place. Pass `--mirror` to make it match `labs/`
+exactly. Requires `rclone` (`rclone config create gdrive drive scope=drive`).
+
 ## Included Skills
 
 The `.claude/skills/` folder carries the reusable non-WSQ courseware toolchain:
@@ -108,6 +126,10 @@ The `.claude/skills/` folder carries the reusable non-WSQ courseware toolchain:
 | `non-wsq-courseware-build` | Single-source pipeline generating the PPT, Lesson Plan and Learner Guide |
 | `non-wsq-courseware-qa` | Prohibited-content scanner + completeness, alignment and visual checks |
 | `non-wsq-lab-author` | Authoring standard for connected, self-verifying hands-on labs |
+| `gdrive-push-nonwsq` | Publishes the built courseware to the course's Google Drive folder |
+
+`.claude/commands/gdrive-push-nonwsq.md` exposes the last one as the `/gdrive-push-nonwsq`
+slash command.
 
 ---
 
