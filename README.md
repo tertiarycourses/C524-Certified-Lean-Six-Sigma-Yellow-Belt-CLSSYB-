@@ -75,7 +75,7 @@ See [labs/tools.md](labs/tools.md) for the browser-based problem-solving tools u
 ├── LG-*.md                         Learner Guide Markdown mirror
 └── .claude/
     ├── skills/                     Build pipeline, QA scanner, lab standard, Drive push
-    └── commands/                   /gdrive-push-nonwsq slash command
+    └── commands/                   /gdrive-push-nonwsq + /lms-push-nonwsq
 ```
 
 ## Building the Courseware
@@ -117,6 +117,20 @@ Activities is **additive**: lab files are uploaded and updated while the trainer
 datasets and `.xlsx` templates are left in place. Pass `--mirror` to make it match `labs/`
 exactly. Requires `rclone` (`rclone config create gdrive drive scope=drive`).
 
+### Publishing the links to the course page
+
+```bash
+export TC_API_KEY='<storefront X-API-Key>'
+python3 .claude/skills/lms-push-nonwsq/lms_push_nonwsq.py --sku C524 --dry-run
+python3 .claude/skills/lms-push-nonwsq/lms_push_nonwsq.py --sku C524
+```
+
+Reads the Drive links and writes them onto the course record in the
+tertiarycourses.com.sg admin — Trainer Slides (PPT), Learner Slides (PPT PDF), Lesson
+Plan, Learner Guide, and Lab URL (the Activities **folder**). Only changed fields are
+written. The Drive folder is discovered from the course's Courseware Link, so the SKU
+alone is enough after one Drive push.
+
 ## Included Skills
 
 The `.claude/skills/` folder carries the reusable non-WSQ courseware toolchain:
@@ -127,9 +141,11 @@ The `.claude/skills/` folder carries the reusable non-WSQ courseware toolchain:
 | `non-wsq-courseware-qa` | Prohibited-content scanner + completeness, alignment and visual checks |
 | `non-wsq-lab-author` | Authoring standard for connected, self-verifying hands-on labs |
 | `gdrive-push-nonwsq` | Publishes the built courseware to the course's Google Drive folder |
+| `lms-push-nonwsq` | Writes the Drive links onto the course record at tertiarycourses.com.sg |
 
-`.claude/commands/gdrive-push-nonwsq.md` exposes the last one as the `/gdrive-push-nonwsq`
-slash command.
+`.claude/commands/` exposes the last two as the `/gdrive-push-nonwsq` and
+`/lms-push-nonwsq` slash commands. The full publish flow is: build → QA →
+`/gdrive-push-nonwsq` → `/lms-push-nonwsq`.
 
 ---
 
