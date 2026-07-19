@@ -1,18 +1,37 @@
-# Labs
+# Labs — Certified Lean Six Sigma Yellow Belt (CLSSYB) Training
 
-Complete the labs in order. They follow the Yellow Belt study-guide domains and build toward a final mini improvement storyboard.
+**Course Code:** C524  |  **Version v5 · 19 July 2026**
 
-| Lab | Domain | Title |
-| --- | --- | --- |
-| 01 | Background and Lean Six Sigma Overview | [Quality Improvement and Lean Six Sigma Overview](lab-01-quality-improvement-and-lean-six-sigma-overview.md) |
-| 02 | Background and Lean Six Sigma Overview | [DMAIC, Sigma, and Yellow Belt Project Support](lab-02-dmaic-sigma-and-yellow-belt-project-support.md) |
-| 03 | Lean Principles and 8 Wastes | [Lean Thinking, Gemba, and Kaizen](lab-03-lean-thinking-gemba-and-kaizen.md) |
-| 04 | Lean Principles and 8 Wastes | [Eight Wastes and Value-Added Analysis](lab-04-eight-wastes-and-value-added-analysis.md) |
-| 05 | Process and Value Stream Mapping | [SIPOC and Process Walk](lab-05-sipoc-and-process-walk.md) |
-| 06 | Process and Value Stream Mapping | [Value Stream Mapping and PICK Action Planning](lab-06-value-stream-mapping-and-pick-action-planning.md) |
-| 07 | Problem Solving, Risk, and Change Management | [Problem Statements, Metrics, and SMART Goals](lab-07-problem-statements-metrics-and-smart-goals.md) |
-| 08 | Problem Solving, Risk, and Change Management | [Root Cause, Risk, and Change Readiness](lab-08-root-cause-risk-and-change-readiness.md) |
-| 09 | Process Improvement Strategies and Sustainment | [5S, Standard Work, Visual Management, and Poka-Yoke](lab-09-5s-standard-work-visual-management-and-poka-yoke.md) |
-| 10 | Process Improvement Strategies and Sustainment | [Control Plan, Audit, and Yellow Belt Readiness](lab-10-control-plan-audit-and-yellow-belt-readiness.md) |
+These labs follow the DMAIC roadmap end to end. Every lab builds on the same Contoso Service Desk scenario, so your outputs accumulate into one complete improvement package.
 
-Use [tools.md](tools.md) for templates and worksheets.
+## Lab types
+
+- **Core** — completed by everyone; these labs build the core improvement package.
+- **Elective** — additional practice with further Lean Six Sigma tools; run when time allows or after the course.
+
+## Lab index
+
+| # | Lab | DMAIC phase | Type |
+|---|-----|-------------|------|
+| 1 | [Yellow Belt Role, Certification Paths, and Improvement Scenario](lab-01-yellow-belt-role-certification-paths-and-improvement-scenari.md) | FOUNDATIONS | Core |
+| 2 | [Lean, Six Sigma, Waste, Voice of Customer, and Value](lab-02-lean-six-sigma-waste-voice-of-customer-and-value.md) | DEFINE | Core |
+| 3 | [SIPOC, Process Mapping, Handoffs, and SME Support](lab-03-sipoc-process-mapping-handoffs-and-sme-support.md) | DEFINE | Core |
+| 4 | [PDCA Small Improvement Project Charter](lab-04-pdca-small-improvement-project-charter.md) | DEFINE | Elective |
+| 5 | [DMAIC Overview, Problem Statement, Scope, and Stakeholders](lab-05-dmaic-overview-problem-statement-scope-and-stakeholders.md) | DEFINE | Core |
+| 6 | [Data Collection, KPIs, Check Sheets, and Basic Metrics](lab-06-data-collection-kpis-check-sheets-and-basic-metrics.md) | MEASURE | Core |
+| 7 | [Pareto, Run Charts, Variation, Yield, DPU, and DPMO](lab-07-pareto-run-charts-variation-yield-dpu-and-dpmo.md) | ANALYZE | Core |
+| 8 | [Root Cause Analysis with 5 Whys, Fishbone, and Evidence](lab-08-root-cause-analysis-with-5-whys-fishbone-and-evidence.md) | ANALYZE | Core |
+| 9 | [Countermeasures, 5S, Mistake Proofing, Standard Work, and Kaizen](lab-09-countermeasures-5s-mistake-proofing-standard-work-and-kaizen.md) | IMPROVE | Core |
+| 10 | [Control Plan, A3 Summary, Handover, and Certification Readiness](lab-10-control-plan-a3-summary-handover-and-certification-readiness.md) | CONTROL | Core |
+| 11 | [Affinity Diagram and Kano Analysis](lab-11-affinity-diagram-and-kano-analysis.md) | DEFINE | Elective |
+| 12 | [Value Stream Map and Takt Time](lab-12-value-stream-map-and-takt-time.md) | MEASURE | Elective |
+| 13 | [Solution Selection Matrix, Benchmarking, and FMEA](lab-13-solution-selection-matrix-benchmarking-and-fmea.md) | IMPROVE | Elective |
+| 14 | [Descriptive Statistics and Implementation Planning](lab-14-descriptive-statistics-and-implementation-planning.md) | CONTROL | Elective |
+
+## The interactive toolkit
+
+See [tools.md](tools.md) for the browser-based problem-solving tools used in the labs.
+
+---
+
+*© 2026 Tertiary Infotech Academy Pte Ltd*

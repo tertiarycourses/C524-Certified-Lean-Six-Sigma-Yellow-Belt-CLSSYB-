@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Distribution archives (rebuildable — never pushed to GitHub)
+*.zip
+
+# Office lock files
+~$*
+
+# Superseded courseware versions (kept locally, not pushed)
+courseware/archive/
