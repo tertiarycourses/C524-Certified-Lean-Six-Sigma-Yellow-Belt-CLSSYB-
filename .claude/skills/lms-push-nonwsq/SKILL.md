@@ -64,6 +64,18 @@ docker exec ai-mms-web-1 php -r 'require_once "/var/www/html/app/Mage.php"; Mage
   echo Mage::getStoreConfig("courses/general/wsq_schedule_api_key");'
 ```
 
+If the local ai-mms container is not running, read the seeded value straight from the
+ai-mms repo — migration 183 seeds `core_config_data` with it (the production value
+matches unless rotated in System → Configuration):
+
+```bash
+export TC_API_KEY=$(sed -n "s/.*wsq_schedule_api_key', '\([^']*\)'.*/\1/p" \
+  ~/projects/tertiary/ai-mms/migrations/183-wsq-schedule-api-key.sql)
+```
+
+**Do not ask the user for this key** — resolve it yourself via the container or the
+migration file above, then continue the push.
+
 ## Usage
 
 ```bash
