@@ -12,7 +12,7 @@ This is a **non-WSQ commercial short course**: there is no assessment, no SSG/Sk
 - **Daily Timing:** 9:30 am – 6:30 pm (1-hour lunch; tea breaks within training time)
 - **Level:** Beginner
 - **Mode:** Instructor-led, hands-on Lean Six Sigma labs
-- **Version:** v5 · 19 July 2026
+- **Version:** v6 · 21 July 2026
 - **Trainer:** Dr. Alfred Ang
 - **Course Registration:** [Certified Lean Six Sigma Yellow Belt (CLSSYB)](https://www.tertiarycourses.com.sg/certified-lean-six-sigma-yellow-belt.html)
 - **Reference:** The Council for Six Sigma Certification (CSSC), *Six Sigma: A Complete Step-by-Step Guide*
@@ -64,14 +64,13 @@ See [labs/tools.md](labs/tools.md) for the browser-based problem-solving tools u
 
 ```
 .
-├── courseware/                     Generated learner-facing artifacts
-│   ├── *-v5.pptx / *-v5.pdf        Slide deck (153 slides, all-white house style)
+├── courseware/                     Learner-facing artifacts
+│   ├── *-v6.pptx / *-v6.pdf        Slide deck (246 slides, concept-first, all-white house style)
 │   ├── LP-*.docx / LP-*.pdf        Lesson Plan
 │   ├── LG-*.docx / LG-*.pdf        Learner Guide
 │   ├── assets/                     Images used by the deck
-│   └── archive/                    Superseded versions (never deleted)
+│   └── archive/                    Superseded versions (kept locally, not pushed)
 ├── labs/                           14 lab worksheets + index + tools
-├── reference/                      Source documents (not learner-facing)
 ├── LG-*.md                         Learner Guide Markdown mirror
 └── .claude/
     ├── skills/                     Build pipeline, QA scanner, lab standard, Drive push
@@ -80,7 +79,15 @@ See [labs/tools.md](labs/tools.md) for the browser-based problem-solving tools u
 
 ## Building the Courseware
 
-All artifacts are generated from **one source of truth** — `course_data.py` plus `data_domain1.py` … `data_domain6.py` — so the deck, Lesson Plan, Learner Guide and labs can never drift apart.
+The **v6 courseware is a 1:1 concept-first mirror of the WSQ counterpart course** (same topic
+spine, same 14 labs, same Learner Guide depth) with the WSQ funding/compliance layer removed,
+per the `/non-wsq-courseware-gen` standard: every lab block is preceded by full concept
+sections with visuals, and labs are always introduced with full explanations — never
+one-liners.
+
+For regenerating from scratch, the single-source pipeline remains available — all generated
+artifacts derive from `course_data.py` plus `data_domain1.py` … `data_domain6.py` — so the
+deck, Lesson Plan, Learner Guide and labs can never drift apart.
 
 ```bash
 # Full build: PPT + LP + LG as DOCX + PDF, with page-numbered tables of contents

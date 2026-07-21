@@ -8,10 +8,20 @@ These browser-based tools are used during the labs. No installation or licence n
 
 | Tool | What it does | Used in |
 |------|--------------|---------|
+| [SIPOC & Process Map](https://alfredang.github.io/sipoc/) | Guided SIPOC that enforces the 5-7 step rule, tags pain points, and generates the swimlane and handoff table from your actor assignments | Labs 3, 12 |
 | [5 Whys](https://alfredang.github.io/5whys/) | Build and share a 5 Whys root-cause chain | Lab 8 |
 | [Fishbone Diagram](https://alfredang.github.io/fishbone/) | Build an Ishikawa cause-and-effect diagram | Lab 8 |
 | [Pareto Chart](https://alfredang.github.io/paretochart/) | Collaborative session: the team brainstorms and votes, and the Pareto chart builds itself live | Lab 7 |
 | [NovaSPC](https://alfredang.github.io/novaspc/) | Run charts, SPC charts (c, u, np, p, X-mR, X̄-R, X̄-s) and process capability from your own CSV | Labs 7, 10 |
+
+### Using the SIPOC builder
+
+1. Set the process name, start point and stop point — the grid unlocks once boundaries are agreed.
+2. List the 5-7 process steps, then work outward: Outputs, Customers, Inputs, Suppliers.
+3. Click a process step to tag pain points (at least three) and assign the actor who performs it.
+4. Open the Swimlane tab — the lanes and every handoff are generated from your actor assignments.
+5. Fill in an owner on both sides of each handoff.
+6. Run **Check my SIPOC**, then export the PNG for your improvement package.
 
 ### Using the collaborative Pareto tool
 
